@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: trichter
+  datasource:
+    name: ${spring.application.name}Ds
+    url: jdbc:postgresql://localhost/trichter
+    username: trichter
+    password: trichterpw
+    driver-class-name: org.postgresql.Driver
+  quartz:
+    auto-startup: true
+    job-store-type: jdbc
+    wait-for-jobs-to-complete-on-shutdown: true
+    jdbc:
+      initialize-schema: always
